@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RGB LED Controller</title>
+    <link rel="stylesheet" href="../static/new.css">
+    <script src="../static/new.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.1/html2canvas.min.js"></script>
+</head>
+<body>
+
+    <div class="main">
+        <img src="../static/new/start 1.png" class="start" style="position:absolute; top:42vh; left:28vw" onclick="start()">
+        <img src="../static/new/1.png" class="word" id="1" style="top:210px; left:430px">
+        <img src="../static/new/2.png" class="word" id="2" style="top:0px; left:10px">
+        <img src="../static/new/3.png" class="word" id="3" style="top:-20px; left:800px; z-index: 2;">
+        <img src="../static/new/4.png" class="word" id="4" style="top:550px; left:-40px">
+        <img src="../static/new/5.png" class="word" id="5" style="top:90px; left:80px">
+        <img src="../static/new/trouble_1.gif" class="word" id="5-1" style="top:-400px; left:-550px">
+        <img src="../static/new/trouble_2.gif" class="word" id="5-2" style="top:-400px; left:-550px">
+        <img src="../static/new/question.gif" class="word" id="5-3" style="top:-50px; left:-110px">
+        <img src="../static/new/6.png" class="word" id="6" style="top:90px; left:80px">
+        <img src="../static/new/house 1.png" class="house" id="9-5" style="top:80px; left:1100px" onclick="reload()">
+        <img src="../static/new/question-bg.png" class="question" id="9-6" style="top:50px; left:130px">
+        <img src="../static/new/question_1.png" class="question" id="9-7" style="top:-712px; left:-540px">
+        <img src="../static/new/question_2.png" class="question" id="9-8" style="top:-712px; left:-500px">
+
+        <div class="first-stage" id="7">
+            <div class="empty-box" id="8" style="top:260px; left:55px; display: none;">
+                <img src="../static/new/jumpp.png" alt="jumpp" class="product" id="jumpp-null">
+            </div>
+
+            <div class="shape-container" id="9" style="top:260px; left:60px">
+                <div class="shape" id="9-1">
+                    <img src="../static/new/jumpp.png" alt="flower" id="flower">
+                </div>
+                <div class="shape">
+                    <img src="../static/new/breat.png" alt="cloud" id="cloud">
+                </div>
+                <div class="shape">
+                    <img src="../static/new/linee.png" alt="star" id="star">
+                </div>
+                <div class="shape">
+                    <img src="../static/new/groww.png" alt="star" id="star">
+                </div>
+                <div class="shape">
+                    <img src="../static/new/shine.png" alt="star" id="star">
+                </div>
+
+                <div class="upbtn" id="9-2" onclick="plusShape(-1)" style="top:-225px; left:-175px">
+                    <img src="../static/new/upbtn 1.png" alt="upBtn">
+                </div>
+                <div class="downbtn" id="9-3" onclick="plusShape(1)" style="top:-20px; left:108px">
+                    <img src="../static/new/downbtn 1.png" alt="downBtn">
+                </div>
+            </div>   
+    
+            <div class="color-container" style="display: none;top:200px; left:65px" id="10">
+                <div class="color" id="red" style="display:inline-block;" onclick="setColor('reddd')">
+                    <img src="../static/new/reddd 1.png" alt="red" id="red">
+                </div>
+                <div class="color" id="yello" onclick="setColor('yello')">
+                    <img src="../static/new/yello 1.png" alt="orange" id="orange">
+                </div>
+                <div class="color" id="blue" onclick="setColor('bluee')">
+                    <img src="../static/new/bluee 1.png" alt="yellow" id="yellow">
+                </div>
+                <div class="color" id="purple" onclick="setColor('purpl')">
+                    <img src="../static/new/purpl 1.png" alt="sky" id="sky">
+                </div>
+                <div class="color" id="pink" onclick="setColor('pinkk')">
+                    <img src="../static/new/pinkk 1.png" alt="blue" id="blue">
+                </div>
+    
+                <div class="upbtn1" id="9-2" onclick="plusColor(-1)" style="top:-120px; left:-190px">
+                    <img src="../static/new/upbtn 1.png" alt="upBtn">
+                </div>
+                <div class="downbtn1" id="9-3" onclick="plusColor(1)" style="display:inline-block; top:145px; left:-240px">
+                    <img src="../static/new/downbtn 1.png" alt="downBtn">
+                </div>
+            </div>  
+
+            <div class="cloud-container" style="display: none;top:280px; left:20px">
+                <img src="../static/new/transfer.gif" class="transfer" style="top:-430px; left:-630px">
+                <img src="../static/new/cloud.png">
+            </div>
+
+            <div class="word-container" style="display: none;top:320px; left:40px">
+                <img src="../static/new/energy.png" class="energy" style="top:-740px; left:-80px">
+                <img src="../static/new/restart 1.png" class="restart" style="top:125px; left:1280px" onclick="reload()">
+                <img src="../static/new/reddd-jumpp-qrcode.png" class="qrcodeImage" style="top:-75px; left:1275px;">
+            </div>
+
+            <div class="final-container" style="display: none;">
+                <img src="../static/new/restart 1.png" class="restart" style="top:350px; left:-100px" onclick="reload()">
+                <img src="../static/new/reddd-jumpp-qrcode.png" class="qrcodeImage" style="top:150px; left:-600px;">
+            </div>
+
+        </div> 
+
+        <div class="first-continue" style="top:410px; left:1085px" id="9-4" onclick="check('first')">
+            <img src="../static/new/nextbtn 1.png">
+        </div>
+        <div class="second">
+            <div class="second-back" style="display:inline-block; top:400px; left:60px;" onclick="back()">
+                <img src="../static/new/backbtn 1.png">
+            </div>
+            <div class="second-continue" style="display:inline-block; top:390px; left:1000px" onclick="check('second')">
+              <img src="../static/new/nextbtn 1.png">
+            </div>
+        </div>
+        <div class="third">
+            <div class="third-continue" style="display:inline-block; top:370px; left:1080px" onclick="check('third')">
+              <img src="../static/new/nextbtn 1.png">
+            </div>
+        </div>  
+        <div class="forth">
+            <div class="forth-continue" style="display:inline-block; top:370px; left:1080px" onclick="check('forth')">
+              <img src="../static/new/nextbtn 1.png">
+            </div>
+        </div>  
+    </div>
+
+</body>
+</html>

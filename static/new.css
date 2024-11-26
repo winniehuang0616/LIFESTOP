@@ -1,0 +1,170 @@
+* {
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+  -webkit-user-drag: none; /* Safari 和 Chrome 支持 */
+  -webkit-user-select: none; /* Safari 和 Chrome 支持 */
+}
+
+body, html {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+  }
+
+.main {
+    background-image: url(./new/0-1.png);
+    background-size: cover;
+    height: 100vh;
+    width: 100%;
+  }
+
+.word {
+    position:absolute;
+    transform: scale(0.8);
+    z-index: 5;
+    display: none;
+}
+
+.start {
+  position: absolute;
+  cursor: pointer;
+}
+
+.house {
+  display: none;
+  z-index: 6;
+  position: absolute;
+  cursor: pointer;
+}
+
+.word-last {
+  display: none;
+  z-index: 6;
+  position: absolute;
+}
+
+.word-last_1 {
+  display: none;
+  z-index: 6;
+  position: relative;
+  transform: scale(0.8);
+}
+
+.restart, .card, .productImage, .qrcodeImage {
+  z-index: 6;
+  position: absolute;
+  cursor: pointer;
+}
+
+.qrcodeImage {
+  transform: scale(0.9);
+}
+
+.productImage {
+  z-index: 7;
+}
+
+.question {
+  display: none;
+  z-index: 5;
+  position: absolute;
+}
+
+.start:hover {
+  content: url('./new/start 2.png');
+}
+.house:hover {
+  content: url('./new/house\ 2.png');
+}
+.restart:hover {
+  content: url('./new/restart\ 2.png');
+}
+
+.first-stage {
+  position: absolute;
+  z-index: 5;
+  display: none;
+  width:100%;
+  display: flex;
+  justify-content: center;
+}
+
+.empty-box, .shape-container, .color-container {
+  display: none;
+  z-index: 5;
+  width:30%;
+  margin: 0 10px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.shape, .color {
+  display: none;
+}
+
+.upbtn, .downbtn, .first-continue, .second, .third, .forth {
+  display: none;
+  position: relative;
+  z-index: 6;
+  cursor: pointer;
+}
+
+.upbtn1, .downbtn1, .second-continue, .second-back, .third-back, .third-continue, .forth-continue {
+  position: relative;
+  cursor: pointer;
+}
+
+.qrcode-container, .cloud-container, .word-container, .final-container {
+  position: relative;
+}
+
+.upbtn:hover,  .upbtn1:hover img{
+  content: url('./new/upbtn 2.png');
+}
+.downbtn:hover, .downbtn1:hover img{
+  content: url('./new/downbtn 2.png');
+}
+.first-continue:hover, .second-continue:hover, .third-continue:hover, .forth-continue:hover img{
+  content: url('./new/nextbtn 2.png');
+} 
+.second-back:hover, .third-back:hover img{
+  content: url('./new/backbtn 2.png');
+}
+
+.qrcode-container img {
+  transform: scale(0.5);
+}
+
+.cloud-container img {
+  transform: scale(0.8);
+}
+
+.transfer, .energy {
+  position: absolute;
+  display: none;
+  transform: scale(0.8);
+}
+
+.energy {
+  position: relative;
+}
+
+.qrcode {
+  position: absolute;
+  top: 250px;
+  left: -100px;
+}
+
+button {
+  font-size: large;
+  font-weight: bold;
+  padding: 10px;
+  border: 0;
+  border-radius: 10px;
+  background-color: rgb(206, 206, 206);
+  color: black;
+  cursor: pointer;
+}
+
+
